@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CoverToCover · Iniciar sessão</title>
+  <meta name="description" content="Biblioteca pessoal interativa: explora um catálogo de livros, lê sinopses e guarda o que queres ler.">
+  <meta name="theme-color" content="#e2c8da">
+  <link rel="icon" type="image/png" href="img/logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
+
+  <header class="topo">
+    <div class="container topo__barra">
+      <a class="marca" href="index.html" aria-label="CoverToCover, página inicial">
+        <img src="img/logo.png" alt="CoverToCover" width="102" height="58">
+      </a>
+      <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="menu-principal">
+        <span class="menu-btn__barras" aria-hidden="true"></span> Menu
+      </button>
+      <nav class="menu" id="menu-principal" aria-label="Principal">
+        <ul>
+      <li><a href="index.html" aria-current="page" data-link-sessao>Iniciar sessão</a></li>
+      <li><a href="livros.html">Procurar livros</a></li>
+      <li><a href="lista.html">A minha lista <span class="contador" data-contador data-zero="true" aria-label="livros na lista">0</span></a></li>
+      <li><a href="sobre.html">Sobre nós</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo">
+    <section class="entrada">
+      <div class="container entrada__grelha">
+        <div class="entrada__texto">
+          <h1>A tua biblioteca pessoal, capa a capa</h1>
+          <p class="intro">Explora um catálogo de 330 livros em inglês, lê as sinopses e guarda os que queres ler a seguir.</p>
+          <p><a class="btn btn--contorno" href="livros.html">Explorar o catálogo sem conta</a></p>
+        </div>
+        <div class="painel painel--login">
+          <h2>Iniciar sessão</h2>
+          <form class="formulario" id="form-login" novalidate>
+            <p class="mensagem" id="login-ola" hidden></p>
+        <div class="campo">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="email-erro">
+          <span class="campo__erro" id="email-erro" role="alert"></span>
+        </div>
+        <div class="campo">
+          <label for="senha">Palavra-passe</label>
+          <input id="senha" name="senha" type="password" autocomplete="current-password" required aria-describedby="senha-erro">
+          <span class="campo__erro" id="senha-erro" role="alert"></span>
+        </div>
+            <div class="aviso-form" role="status" hidden></div>
+            <button class="btn btn--bloco" type="submit">Entrar</button>
+          </form>
+          <div class="links-login">
+            <a href="registo.html">Ainda não tens conta? Criar conta</a>
+            <a href="#" id="esqueci">Esqueceste-te da palavra-passe?</a>
+          </div>
+        </div>
+      </div>
+      <div class="container estante-bloco">
+        <h2>Os mais lidos na estante</h2>
+        <ul class="estante" id="estante" aria-label="Livros mais populares"></ul>
+      </div>
+    </section>
+  </main>
+
+  <div class="so-leitores" id="aviso" role="status" aria-live="polite"></div>
+
+  <footer class="rodape">
+    <div class="container">
+      <div class="rodape__grelha">
+        <div>
+          <a class="rodape__marca" href="index.html"><img src="img/logo.png" alt="CoverToCover" width="85" height="48"></a>
+          <p>A tua biblioteca pessoal interativa: explora, lê a sinopse e guarda o que queres ler.</p>
+        </div>
+        <nav aria-label="Rodapé">
+          <h2>Páginas</h2>
+          <ul>
+            <li><a href="index.html">Iniciar sessão</a></li>
+            <li><a href="registo.html">Criar conta</a></li>
+            <li><a href="livros.html">Procurar livros</a></li>
+            <li><a href="lista.html">A minha lista</a></li>
+            <li><a href="sobre.html">Sobre nós</a></li>
+          </ul>
+        </nav>
+        <div>
+          <h2>Projeto</h2>
+          <ul>
+            <li>Aplicações Web, 2026/2027</li>
+            <li>Licenciatura em Informática de Gestão</li>
+            <li>ISCAC Coimbra Business School</li>
+            <li><a href="https://github.com/brunahenriques/projeto-web-2026">Código no GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="rodape__fim"><p>© 2026 CoverToCover · Bruna Henriques e Rodrigo Henriques. Dados de livros: dataset “Best Books Ever” (Goodreads).</p></div>
+    </div>
+  </footer>
+  <script src="data/livros.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>
